@@ -15,4 +15,4 @@ if __name__ == '__main__':
     if name in birthdays:
         print('{}\'s birthday is {}.'.format(name, birthdays[name]))
     else:
-        print('I don\'t know what that is or when their birthday is. Sorry')
+        print('\nI don\'t know what that is or when their birthday is. \nSorry, try again. ')
