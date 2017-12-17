@@ -3,11 +3,11 @@ import json
 answer = 'yes'
 
 while answer != 'no':
-    with open ('birthdays.json', 'r') as f_r:
-        data =  json.load(f_r)
+    with open ('birthdays.json', 'r') as f:
+        birthday =  json.load(f)
 
         print('Here\'s the people that are in the Birthday Dictionary...')
-        for i in data:
+        for i in birthday:
             print ("\n" + i)
 
         ans = input("1: Find someone's birthday. \n OR! \n 2: Add a new person's birthday. \n")
@@ -26,8 +26,8 @@ while answer != 'no':
 
                 data[new_name] = new_bd
 
-                with open('birthdays.json', 'w') as f_w:
-                    json.dump(data, f_w)
+                with open('birthdays.json', 'w') as f:
+                    json.dump(data, f)
 
                 print ('Birthday added! ')
 
