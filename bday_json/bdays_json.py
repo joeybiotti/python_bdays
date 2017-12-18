@@ -25,3 +25,14 @@ def list_bdays():
     for key in birthday:
         print(key.ljust(31), ': ', birthday[key])
     print()
+
+while True:
+    next_thing = input('What do you want to do now? Add? Find? List? Quit? \n').capitalize()
+    if next_thing == 'Quit':
+        raise SystemExit(0)
+    elif next_thing == 'Add':
+        add_bday()
+    elif next_thing == 'Find':
+        find_bday()
+    elif next_thing == 'List':
+        list_bdays()
