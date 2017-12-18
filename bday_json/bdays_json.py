@@ -1,7 +1,7 @@
 import json
 
 birthday = {}
-with open('birthdays.json') as f:
+with open('bdays.json', 'r') as f:
     birthday = json.load(f)
 
 def add_bday():
@@ -12,3 +12,10 @@ def add_bday():
         json.dump(birthday, f)
     print('{} added to the list\n'.format(name))
 
+def find_bday():
+    name = input('Who\'s birthday do you want to know?')
+    try :
+        if birthday[name]:
+            print('{} was born on {}\n'.format(name, birthday[name]))
+    except KeyError:
+        print('{} ain\'t in the b-day dictionary')
