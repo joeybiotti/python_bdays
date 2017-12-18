@@ -19,3 +19,9 @@ def find_bday():
             print('{} was born on {}\n'.format(name, birthday[name]))
     except KeyError:
         print('{} ain\'t in the b-day dictionary')
+
+def list_bdays():
+    print('Here\'s everyone in the Birthday Dictionary... \n **********************************************')
+    for key in birthday:
+        print(key.ljust(31), ': ', birthday[key])
+    print()
